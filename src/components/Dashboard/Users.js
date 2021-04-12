@@ -36,7 +36,7 @@ const Users = (props) => {
                 return (
                   <li class="collection-item avatar">
                     <img src={personAvatar} alt="" class="circle" />
-                    <div className="nameAndFollow">
+                    <div className="name-and-follow">
                       <p>{user.firstName + " " + user.lastName}</p>
                       {profile.following.includes(user.email) ? (
                         <button

@@ -16,6 +16,10 @@
   display: flex;
 }
 
+.welcome-name p {
+  font-size: 25px;
+}
+
 .name {
   color: #1da1f2;
 }
@@ -73,9 +77,34 @@
 .collection-item {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.nameAndFollow {
+.name-and-follow {
   display: flex;
   flex-direction: column;
+}
+
+.name-and-follow p{
+  font-size: 19px;
+}
+
+.btn {
+  border-radius: 10px;
+  padding: 0px 8px;
+}
+
+@media (max-width: 768px) {
+  .tweets-and-users {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tweets {
+    width: 100%;
+  }
+
+  .users {
+    width: 100%;
+  }
 }
