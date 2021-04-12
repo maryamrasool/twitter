@@ -1,0 +1,81 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 40px;
+  box-sizing: border-box;
+}
+
+.name-and-logout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-name {
+  display: flex;
+}
+
+.name {
+  color: #1da1f2;
+}
+
+.tweets-and-users {
+  display: flex;
+}
+
+.logout-button {
+  background-color: #1da1f2;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 9999px;
+}
+
+.post-tweets {
+  width: 100%;
+}
+
+.post-tweets-container {
+  width: 100%;
+}
+
+.tweets-and-users {
+  display: flex;
+}
+
+.tweets {
+  width: 70%;
+}
+
+.users {
+  width: 30%;
+}
+
+.post-button {
+  margin-left: 20px;
+  height: 43px;
+}
+
+.post-tweets-container {
+  display: flex;
+}
+
+.users-container {
+  margin-left: 30px;
+  align-items: center;
+}
+
+.collection-item {
+  display: flex;
+  align-items: center;
+}
+
+.nameAndFollow {
+  display: flex;
+  flex-direction: column;
+}
