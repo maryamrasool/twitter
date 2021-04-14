@@ -41,7 +41,7 @@ const Users = (props) => {
                       {profile.following.includes(user.email) ? (
                         <button
                           id={user.email}
-                          className="btn btn-small red"
+                          className="unfollow-button"
                           onClick={(e) => handleUnfollow(e, props)}
                         >
                           Unfollow
@@ -49,7 +49,7 @@ const Users = (props) => {
                       ) : (
                         <button
                           id={user.email}
-                          className="btn btn-small blue"
+                          className="follow-button"
                           onClick={(e) => handleFollow(e, props)}
                         >
                           Follow
@@ -61,8 +61,12 @@ const Users = (props) => {
               }
             })}
           </ul>
-        ) : "No Users"
-      ) : "No Users"}
+        ) : (
+          "No Users"
+        )
+      ) : (
+        "No Users"
+      )}
     </div>
   );
 };

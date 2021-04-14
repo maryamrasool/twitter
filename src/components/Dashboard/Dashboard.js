@@ -19,7 +19,9 @@ const Dashboard = (props) => {
       <div className="name-and-logout">
         <div className="welcome-name">
           <p>Welcome, </p>
-          <p className="name">{" " + profile.firstName + " " + profile.lastName} </p>
+          <p className="name">
+            {" " + profile.firstName + " " + profile.lastName}{" "}
+          </p>
         </div>
         <Link to="/">
           <button class="logout-button" onClick={props.logout}>

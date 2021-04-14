@@ -4,7 +4,7 @@ export const postTweet = (tweet) => {
     fireStore
       .collection("tweets")
       .add({
-        ...tweet
+        ...tweet,
       })
       .then(() => {
         dispatch({ type: "POST_TWEET", tweet });

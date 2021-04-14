@@ -45,7 +45,7 @@ class PostTweet extends Component {
             </div>
 
             <div className="input-field">
-              <button className="btn blue post-button">Post</button>
+              <button className="post-button">Post</button>
             </div>
           </div>
         </form>

@@ -9,32 +9,34 @@ const Tweets = (props) => {
     <div className="tweets-container">
       {profile.following
         ? tweets
-          ? tweets.map((obj) => {
-              if (
-                profile.following.includes(obj.authorEmail) ||
-                obj.authorEmail == profile.email
-              ) {
-                let date = obj.timeStamp;
-                date = date.substring(0, 24);
-                return (
-                  <div class="card">
-                    <div class="card-content black-text">
-                      <p>{obj.content}</p>
+          ? tweets
+              .map((obj) => {
+                if (
+                  profile.following.includes(obj.authorEmail) ||
+                  obj.authorEmail == profile.email
+                ) {
+                  let date = obj.timeStamp;
+                  date = date.substring(0, 24);
+                  return (
+                    <div class="card">
+                      <div class="card-content black-text">
+                        <p>{obj.content}</p>
+                      </div>
+                      <div class="card-action gray-text">
+                        <p>
+                          {"By " +
+                            obj.authorFName +
+                            " " +
+                            obj.authorLName +
+                            " at " +
+                            date}
+                        </p>
+                      </div>
                     </div>
-                    <div class="card-action gray-text">
-                      <p>
-                        {"By " +
-                          obj.authorFName +
-                          " " +
-                          obj.authorLName +
-                          " at " +
-                          date}
-                      </p>
-                    </div>
-                  </div>
-                );
-              }
-            }).reverse()
+                  );
+                }
+              })
+              .reverse()
           : "No Tweets"
         : null}
     </div>

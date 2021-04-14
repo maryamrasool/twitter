@@ -36,6 +36,20 @@ const authReducer = (state = initState, action) => {
         ...state,
         authError: action.err.message,
       };
+
+    case "LOGIN_WITH_GOOGLE_SUCCESS":
+      console.log("Log in with google Success");
+      return {
+        ...state,
+        authError: null,
+      };
+
+    case "LOGIN_WITH_GOOGLE_ERROR":
+      console.log("Login with google error");
+      return {
+        ...state,
+        authError: action.err.message,
+      };
     default:
       return state;
   }

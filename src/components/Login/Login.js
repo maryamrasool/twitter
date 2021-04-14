@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { login } from "../../store/actions/authActions";
+import { loginWithGoogle } from "../../store/actions/authActions";
 
 import "./Login.css";
 
@@ -18,6 +19,11 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.login(this.state);
+  };
+
+  handleGoogleLogin = () => {
+    console.log("Button Clic");
+    this.props.loginWithGoogle();
   };
 
   render() {
@@ -57,6 +63,9 @@ class Login extends Component {
             </div>
           </div>
         </form>
+        <button className="btn orange" onClick={this.handleGoogleLogin}>
+          Log In With Google
+        </button>
       </div>
     );
   }
@@ -70,8 +79,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
+  console.log("Dispatching");
   return {
     login: (creds) => dispatch(login(creds)),
+    loginWithGoogle: () => dispatch(loginWithGoogle()),
   };
 };
 
